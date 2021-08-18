@@ -29,18 +29,78 @@ function render(variables = {}) {
   let cover = `<div class="cover"><img src="${variables.background}" /></div>`;
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
+  // name input
+  let name = "Lucy";
+  if (variables.name != null) {
+    name = variables.name;
+  }
+
+  // lastName input
+  let lastName = "Boilett";
+  if (variables.lastname != null) {
+    lastName = variables.lastname;
+  }
+
+  // role input
+  let role = "Web Developer";
+  if (variables.role != null) {
+    role = variables.role;
+  }
+
+  // city input
+  let city = "Miami";
+  if (variables.city != null) {
+    city = variables.city;
+  }
+
+  // country input
+  let country = "USA";
+  if (variables.country != null) {
+    country = variables.country;
+  }
+
+  // social media bar position
+  let socialMediaPosition = "position-right";
+  if (variables.socialMediaPosition != "position-right") {
+    socialMediaPosition = "position-left";
+  }
+
+  // twitter input
+  let twitter = "alesanchezr";
+  if (twitter != null) {
+    twitter = variables.twitter;
+  }
+
+  // github input
+  let github = "alesanchezr";
+  if (github != null) {
+    github = variables.github;
+  }
+
+  // linkedin input
+  let linkedin = "alesanchezr";
+  if (linkedin != null) {
+    linkedin = variables.linkedin;
+  }
+
+  // instagram input
+  let instagram = "alesanchezr";
+  if (instagram != null) {
+    instagram = variables.instagram;
+  }
+
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
-          <h1>Lucy Boilett</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
-            <li><a href="https://twitter.com/alesanchezr"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/alesanchezr"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/alesanchezr"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/alesanchezr"><i class="fa fa-instagram"></i></a></li>
+          <h1>${name} ${lastName}</h1>
+          <h2>${role}</h2>
+          <h3>${city}, ${country}</h3>
+          <ul class="${socialMediaPosition}">
+            <li><a href="https://twitter.com/${twitter}"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://github.com/${github}"><i class="fa fa-github"></i></a></li>
+            <li><a href="https://linkedin.com/in/${linkedin}"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://instagram.com/${instagram}"><i class="fa fa-instagram"></i></a></li>
           </ul>
         </div>
     `;
