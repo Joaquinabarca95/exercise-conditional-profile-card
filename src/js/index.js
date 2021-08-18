@@ -30,64 +30,41 @@ function render(variables = {}) {
   if (variables.includeCover == false) cover = "<div class='cover'></div>";
 
   // name input
-  let name = "Lucy";
-  if (variables.name != null) {
-    name = variables.name;
-  }
+  let name = variables.name != null ? `${variables.name}` : "Lucy";
 
   // lastName input
-  let lastName = "Boilett";
-  if (variables.lastname != null) {
-    lastName = variables.lastname;
-  }
+  let lastName =
+    variables.lastname != null ? `${variables.lastname}` : "Boilett";
 
   // role input
-  let role = "Web Developer";
-  if (variables.role != null) {
-    role = variables.role;
-  }
+  let role = variables.role != null ? `${variables.role}` : "Web Developer";
 
   // city input
-  let city = "Miami";
-  if (variables.city != null) {
-    city = variables.city;
-  }
+  let city = variables.city != null ? `${variables.city}` : "Miami";
 
   // country input
-  let country = "USA";
-  if (variables.country != null) {
-    country = variables.country;
-  }
+  let country = variables.country != null ? `${variables.country}` : "USA";
 
   // social media bar position
-  let socialMediaPosition = "position-right";
-  if (variables.socialMediaPosition != "position-right") {
-    socialMediaPosition = "position-left";
-  }
+  let socialMediaPosition =
+    variables.socialMediaPosition != "position-right"
+      ? `${variables.socialMediaPosition}`
+      : "position-right";
 
   // twitter input
-  let twitter = "alesanchezr";
-  if (twitter != null) {
-    twitter = variables.twitter;
-  }
+  let twitter =
+    variables.twitter != null ? `${variables.twitter}` : "alesanchezr";
 
   // github input
-  let github = "alesanchezr";
-  if (github != null) {
-    github = variables.github;
-  }
+  let github = variables.github != null ? `${variables.github}` : "alesanchezr";
 
   // linkedin input
-  let linkedin = "alesanchezr";
-  if (linkedin != null) {
-    linkedin = variables.linkedin;
-  }
+  let linkedin =
+    variables.linkedin != null ? `${variables.linkedin}` : "alesanchezr";
 
   // instagram input
-  let instagram = "alesanchezr";
-  if (instagram != null) {
-    instagram = variables.instagram;
-  }
+  let instagram =
+    variables.instagram != null ? `${variables.instagram}` : "alesanchezr";
 
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
